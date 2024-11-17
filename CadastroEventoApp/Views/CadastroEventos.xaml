@@ -20,40 +20,63 @@
 
                 <VerticalStackLayout VerticalOptions="CenterAndExpand"
                                          Padding="10">
-                    <Frame>
+                    <Frame Margin="5">
                         <VerticalStackLayout>
                             <Label Text="Nome do Evento:"/>
-                            <Entry Placeholder="Nome do Evento"/>
+                            <Entry Placeholder="Nome do Evento"
+                                   x:Name="NomeEntry"/>
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame>
+                    <Frame Margin="5">
                         <VerticalStackLayout>
-                            <Label Text="Data de Início:" />
-                            <Entry Placeholder="Data de Início" />
+                            <HorizontalStackLayout>
+                                <Label Text="Data de Início:" />
+                                <DatePicker x:Name="DataInicioPicker"
+                                            Date="{Binding Evento.DataInicio}"
+                                            Format="dd/MM/yyyy"/>
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+                                <Label Text="Data de Término:" />
+                                <DatePicker x:Name="DataTerminoPicker" 
+                                            Date="{Binding Evento.DataTermino}"
+                                            Format="dd/MM/yyyy"/>
+                            </HorizontalStackLayout>
+                            
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame>
-                        <VerticalStackLayout>
-                            <Label Text="Data de Término:" />
-                            <Entry Placeholder="Data de Término" />
-                        </VerticalStackLayout>
-                    </Frame>
-
-                    <Frame>
+                    <Frame Margin="5">
                         <VerticalStackLayout>
                             <Label Text="Número de Participantes:" />
-                            <Entry Placeholder="Número de Participantes" />
+                            <Entry  x:Name="NumeroParticipantesEntry"
+                                    Placeholder="Número de Participantes" 
+                                    Keyboard="Numeric" />
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame>
+                    <Frame Margin="5">
                         <VerticalStackLayout>
                             <Label Text="Local do Evento:" />
-                            <Entry Placeholder="Local do Evento" />
+                            <Entry x:Name="LocalEntry"
+                                   Placeholder="Local do Evento" />
                         </VerticalStackLayout>
                     </Frame>
+
+                    <Frame Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="Custo por Participante:" />
+                            <Entry x:Name="CustoPorParticipanteEntry"
+                                   Placeholder="Custo por Participante"
+                                   Keyboard="Numeric"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Button Text="Finalizar Cadastro" 
+                            Clicked="Button_Clicked"
+                            FontAttributes="Bold"
+                            FontSize="15"/>
 
                 </VerticalStackLayout>
 
