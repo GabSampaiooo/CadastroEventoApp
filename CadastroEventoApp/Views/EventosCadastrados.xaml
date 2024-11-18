@@ -3,45 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CadastroEventoApp.Views.EventosCadastrados"
              Title="EventosCadastrados"
-             NavigationPage.HasNavigationBar="False"
-             Background="{StaticResource Gray200}">
+             NavigationPage.HasNavigationBar="False">
 
     <ScrollView>
-        <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                              BackgroundColor="#0CCDA3">
 
             <Label Text="Resumo do Evento" 
                    FontFamily="NotoRegular"
+                   FontAttributes="Bold"
                    FontSize="40"
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
 
-            <Frame Margin="10">
+            <Frame Margin="10"
+                   BackgroundColor="#C1FCD3">
                 <VerticalStackLayout>
                     <Label Text="{Binding Nome}" 
                            HorizontalTextAlignment="Center"
-                           TextColor="Black"
+                           TextColor="DarkGreen"
+                           FontAttributes="Bold"
                            FontSize="40"
                            FontFamily="NotoRegular"/>
 
-                    <Frame Margin="10">
+                    <Frame Margin="10"
+                           BackgroundColor="#0CCDA3">
                         <VerticalStackLayout>
                             <Grid ColumnDefinitions="*, *"
                                   RowDefinitions="Auto, Auto">
                                 
                                 <Label Text="Data de Início:" 
                                        Grid.Row="0" Grid.Column="0"
-                                       FontSize="15"/>
+                                       FontSize="16"
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
 
                                 <Label Text="{Binding DataInicio, StringFormat='{}{0:dd/MM/yyyy}' }" 
                                        Grid.Row="1" Grid.Column="0"
-                                       FontSize="15"/>
+                                       FontSize="15"
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
 
                                 <Label Text="Data de Término:" 
                                        Grid.Row="0" Grid.Column="1"
-                                       FontSize="15"/>
+                                       FontSize="16"
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
                                 
                                 <Label Text="{Binding DataTermino, StringFormat='{}{0:dd/MM/yyyy}' }" 
                                        Grid.Row="1" Grid.Column="1"
-                                       FontSize="15"/>
+                                       FontSize="15"
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
 
 
                             </Grid>
@@ -50,7 +63,8 @@
 
                     </Frame>
 
-                    <Frame Margin="10">
+                    <Frame Margin="10"
+                           BackgroundColor="#0CCDA3">
 
                         <VerticalStackLayout>
                             <Grid ColumnDefinitions="*, *"
@@ -58,54 +72,95 @@
                                 <Label  Text="Total de participantes:" 
                                         Grid.Row="0" Grid.Column="0"
                                         Margin="10"
-                                        FontSize="15"/>
+                                        FontSize="15"
+                                        TextColor="DarkGreen"
+                                        FontAttributes="Bold"/>
 
                                 <Label  Text="{Binding NumeroParticipantes}" 
                                         Grid.Row="1" Grid.Column="0"
                                         Margin="10"
-                                        FontSize="15"/>
+                                        FontSize="15"
+                                        TextColor="DarkGreen"
+                                        FontAttributes="Bold"/>
 
                                 <Label Text="Custo do Ingresso :" 
                                        Grid.Row="0" Grid.Column="1"
                                        Margin="10"
-                                       FontSize="15"/>
+                                       FontSize="15"
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
 
                                 <Label  Text="{Binding CustoPorParticipante, StringFormat='{}{0:c}'}" 
                                         Grid.Row="1" Grid.Column="1"
                                         Margin="10"
-                                        FontSize="15"/>
+                                        FontSize="15"
+                                        TextColor="DarkGreen"
+                                        FontAttributes="Bold"/>
                             </Grid>
                         </VerticalStackLayout>                                            
                     </Frame>
 
-                    <Frame Margin="10">
+                    <Frame Margin="10"
+                           BackgroundColor="#0CCDA3">
                         <VerticalStackLayout>
                             <Label Text="Local do Evento:"
                                    FontSize="20"
-                                   FontFamily="NotoRegular"/>
+                                   FontFamily="NotoRegular"
+                                   TextColor="DarkGreen"
+                                   FontAttributes="Bold"/>
+                            
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Local}" 
-                                       FontSize="15"/>
+                                       FontSize="15"
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
                             </HorizontalStackLayout>
+                            
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame Margin="10">
+                    <Frame Margin="10"
+                           BackgroundColor="#0CCDA3">
                         <HorizontalStackLayout>
                             <Label Text="Valor Total:" 
-                                   FontSize="15"/>
+                                   FontSize="15"
+                                   TextColor="DarkGreen"
+                                   FontAttributes="Bold"/>
+                            
                             <Label Text="{Binding CustoTotal, StringFormat='{}{0:c}'}" 
-                                   FontSize="15"/>
+                                   FontSize="15"
+                                   TextColor="DarkGreen"
+                                   FontAttributes="Bold"/>
                         </HorizontalStackLayout>
                     </Frame>
-                
+
+
+                    <Frame Margin="10"
+                           BackgroundColor="#0CCDA3">
+                        <HorizontalStackLayout>
+                            <Label Text="Duração do Evento em Dias:"
+                                   FontSize="17"
+                                   FontAttributes="Bold"
+                                   TextColor="DarkGreen"/>
+
+                            <Label Text="{Binding DuracaoEvento}" 
+                                   FontAttributes="Bold"
+                                   TextColor="DarkGreen"
+                                   FontSize="17"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+
                 </VerticalStackLayout>
+               
             </Frame>
 
             <Button Text="Voltar" 
                     Clicked="Button_Clicked"
                     HorizontalOptions="Center"
-                    FontSize="30"/>
+                    FontSize="30"
+                    BackgroundColor="#C1FCD3"
+                    TextColor="DarkGreen"
+                    FontFamily="NotoBold"/>
 
         </VerticalStackLayout>
     </ScrollView>

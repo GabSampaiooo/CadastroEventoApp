@@ -3,74 +3,106 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CadastroEventoApp.Views.CadastroEventos"
              Title="CadastroEventos"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Gray400}">
+             NavigationPage.HasNavigationBar="False">
 
     <ScrollView>
         <VerticalStackLayout VerticalOptions="CenterAndExpand"
-                             Padding="10">
+                             Padding="10"
+                             BackgroundColor="#0CCDA3">
 
             <Label Text="Cadastre Seu Evento Aqui:"
-                   FontFamily="NotoRegular"
+                   FontFamily="NotoBold"
                    FontSize="40"
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   TextColor="DarkGreen"/>
 
             <Frame VerticalOptions="CenterAndExpand"
-                       Padding="10">
+                   Padding="10"
+                   Margin="5"
+                   BackgroundColor="#C1FCD3">
 
                 <VerticalStackLayout VerticalOptions="CenterAndExpand"
                                          Padding="10">
-                    <Frame Margin="5">
+                    <Frame Margin="5"
+                           BackgroundColor="#0CCDA3">
                         <VerticalStackLayout>
-                            <Label Text="Nome do Evento:"/>
+                            <Label Text="Nome do Evento:"
+                                   TextColor="DarkGreen"
+                                   FontAttributes="Bold"/>
                             <Entry Placeholder="Nome do Evento"
-                                   x:Name="NomeEntry"/>
+                                   x:Name="NomeEntry"
+                                   TextColor="DarkGreen"
+                                   FontAttributes="Bold"/>
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame Margin="5">
+                    <Frame Margin="5"
+                           BackgroundColor="#0CCDA3">
                         <VerticalStackLayout>
                             <HorizontalStackLayout>
-                                <Label Text="Data de Início:" />
+                                <Label Text="Data de Início:" 
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
                                 <DatePicker x:Name="DataInicioPicker"
                                             DateSelected="DataInicioPicker_DateSelected"
                                             Date="{Binding Evento.DataInicio}"
-                                            Format="dd/MM/yyyy"/>
+                                            Format="dd/MM/yyyy"
+                                            TextColor="DarkGreen"
+                                            FontAttributes="Bold"/>
                             </HorizontalStackLayout>
 
                             <HorizontalStackLayout>
-                                <Label Text="Data de Término:" />
+                                <Label Text="Data de Término:" 
+                                       TextColor="DarkGreen"
+                                       FontAttributes="Bold"/>
                                 <DatePicker x:Name="DataTerminoPicker" 
                                             Date="{Binding Evento.DataTermino}"
-                                            Format="dd/MM/yyyy"/>
+                                            Format="dd/MM/yyyy"
+                                            TextColor="DarkGreen"
+                                            FontAttributes="Bold"/>
                             </HorizontalStackLayout>
                             
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame Margin="5">
+                    <Frame Margin="5"
+                           BackgroundColor="#0CCDA3">
                         <VerticalStackLayout>
-                            <Label Text="Número de Participantes:" />
+                            <Label Text="Número de Participantes:" 
+                                   FontAttributes="Bold"
+                                   TextColor="DarkGreen"/>
+                            
                             <Entry  x:Name="NumeroParticipantesEntry"
                                     Placeholder="Número de Participantes" 
-                                    Keyboard="Numeric" />
+                                    Keyboard="Numeric" 
+                                    FontAttributes="Bold"/>
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame Margin="5">
+                    <Frame Margin="5"
+                           BackgroundColor="#0CCDA3">
                         <VerticalStackLayout>
-                            <Label Text="Local do Evento:" />
+                            <Label Text="Local do Evento:" 
+                                   TextColor="DarkGreen"
+                                   FontAttributes="Bold"/>
+                            
                             <Entry x:Name="LocalEntry"
-                                   Placeholder="Local do Evento" />
+                                   Placeholder="Local do Evento" 
+                                   FontAttributes="Bold"/>
                         </VerticalStackLayout>
                     </Frame>
 
-                    <Frame Margin="5">
+                    <Frame Margin="5"
+                           BackgroundColor="#0CCDA3">
                         <VerticalStackLayout>
-                            <Label Text="Custo por Participante:" />
+                            <Label Text="Custo por Participante:" 
+                                   TextColor="DarkGreen"
+                                   FontAttributes="Bold"/>
+                            
                             <Entry x:Name="CustoPorParticipanteEntry"
                                    Placeholder="Custo por Participante"
-                                   Keyboard="Numeric"/>
+                                   Keyboard="Numeric"
+                                   FontAttributes="Bold"/>
                         </VerticalStackLayout>
                     </Frame>
 
@@ -78,14 +110,16 @@
                             Clicked="Button_Clicked"
                             FontAttributes="Bold"
                             FontSize="20"
-                            HorizontalOptions="Center"/>
+                            HorizontalOptions="Center"
+                            BackgroundColor="#0ccda3"/>
 
                     <Button Text="Início" 
                             Clicked="Button_Clicked_1"
                             FontAttributes="Bold"
                             FontSize="20"
                             HorizontalOptions="Center"
-                            Margin="5"/>
+                            Margin="5"
+                            BackgroundColor="#0ccda3"/>
 
                 </VerticalStackLayout>
 
