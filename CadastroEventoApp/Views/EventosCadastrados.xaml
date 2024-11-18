@@ -19,7 +19,8 @@
                     <Label Text="{Binding Nome}" 
                            HorizontalTextAlignment="Center"
                            TextColor="Black"
-                           FontSize="40"/>
+                           FontSize="40"
+                           FontFamily="NotoRegular"/>
 
                     <Frame Margin="10">
                         <VerticalStackLayout>
@@ -27,19 +28,20 @@
                                   RowDefinitions="Auto, Auto">
                                 
                                 <Label Text="Data de Início:" 
-                                       FontFamily="NotoRegular"
-                                       Grid.Row="0" Grid.Column="0"/>
+                                       Grid.Row="0" Grid.Column="0"
+                                       FontSize="15"/>
 
                                 <Label Text="{Binding DataInicio, StringFormat='{}{0:dd/MM/yyyy}' }" 
-                                       FontFamily="NotoRegular"
-                                       Grid.Row="1" Grid.Column="0"/>
+                                       Grid.Row="1" Grid.Column="0"
+                                       FontSize="15"/>
 
                                 <Label Text="Data de Término:" 
-                                       FontFamily="NotoRegular"
-                                       Grid.Row="0" Grid.Column="1"/>
+                                       Grid.Row="0" Grid.Column="1"
+                                       FontSize="15"/>
+                                
                                 <Label Text="{Binding DataTermino, StringFormat='{}{0:dd/MM/yyyy}' }" 
-                                       FontFamily="NotoRegular"
-                                       Grid.Row="1" Grid.Column="1"/>
+                                       Grid.Row="1" Grid.Column="1"
+                                       FontSize="15"/>
 
 
                             </Grid>
@@ -54,41 +56,46 @@
                             <Grid ColumnDefinitions="*, *"
                                   RowDefinitions="Auto, Auto">
                                 <Label  Text="Total de participantes:" 
-                                        FontFamily="NotoRegular"
                                         Grid.Row="0" Grid.Column="0"
-                                        Margin="10"/>
+                                        Margin="10"
+                                        FontSize="15"/>
 
                                 <Label  Text="{Binding NumeroParticipantes}" 
-                                        FontFamily="NotoRegular"
                                         Grid.Row="1" Grid.Column="0"
-                                        Margin="10"/>
+                                        Margin="10"
+                                        FontSize="15"/>
 
                                 <Label Text="Custo do Ingresso :" 
-                                       FontFamily="NotoRegular"
                                        Grid.Row="0" Grid.Column="1"
-                                       Margin="10"/>
+                                       Margin="10"
+                                       FontSize="15"/>
 
                                 <Label  Text="{Binding CustoPorParticipante, StringFormat='{}{0:c}'}" 
-                                        FontFamily="NotoRegular"
                                         Grid.Row="1" Grid.Column="1"
-                                        Margin="10"/>
+                                        Margin="10"
+                                        FontSize="15"/>
                             </Grid>
                         </VerticalStackLayout>                                            
                     </Frame>
 
                     <Frame Margin="10">
                         <VerticalStackLayout>
-                            <Label Text="Local do Evento:"/>
+                            <Label Text="Local do Evento:"
+                                   FontSize="20"
+                                   FontFamily="NotoRegular"/>
                             <HorizontalStackLayout>
-                                <Label Text="{Binding Local}" />
+                                <Label Text="{Binding Local}" 
+                                       FontSize="15"/>
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
                     </Frame>
 
                     <Frame Margin="10">
                         <HorizontalStackLayout>
-                            <Label Text="Valor Total:" />
-                            <Label Text="{Binding CustoTotal, StringFormat='{}{0:c}'}" />
+                            <Label Text="Valor Total:" 
+                                   FontSize="15"/>
+                            <Label Text="{Binding CustoTotal, StringFormat='{}{0:c}'}" 
+                                   FontSize="15"/>
                         </HorizontalStackLayout>
                     </Frame>
                 
@@ -97,7 +104,8 @@
 
             <Button Text="Voltar" 
                     Clicked="Button_Clicked"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    FontSize="30"/>
 
         </VerticalStackLayout>
     </ScrollView>

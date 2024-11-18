@@ -69,6 +69,17 @@ public partial class CadastroEventos : ContentPage
 
         DataTerminoPicker.MinimumDate = data_selecionada_inicio;
     }
+
+    private async void Button_Clicked_1(object sender, EventArgs e)
+    {
+        try
+        {
+            await Navigation.PushAsync(new PaginaInicial());
+        } catch (Exception ex)
+        {
+            await DisplayAlert("Ops", ex.Message, "OK");
+        }
+    }
 }
 
 

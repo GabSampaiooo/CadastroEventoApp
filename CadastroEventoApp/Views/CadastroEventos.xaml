@@ -77,8 +77,15 @@
                     <Button Text="Finalizar Cadastro" 
                             Clicked="Button_Clicked"
                             FontAttributes="Bold"
-                            FontSize="15"
+                            FontSize="20"
                             HorizontalOptions="Center"/>
+
+                    <Button Text="Início" 
+                            Clicked="Button_Clicked_1"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Margin="5"/>
 
                 </VerticalStackLayout>
 
