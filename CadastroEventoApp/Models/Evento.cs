@@ -12,20 +12,17 @@
         //Cálculo da duração do evento em dias
         public int DuracaoEvento
         {
-            get
-            {
-                return (DataTermino - DataInicio).Days;
-            }
+            get => DataTermino.Subtract(DataInicio).Days;          
         }
-
+         
         //Cálculo do custo total do evento
         public double CustoTotal
         {
             get
             {
-                return NumeroParticipantes * CustoPorParticipante;
+                double total = NumeroParticipantes * CustoPorParticipante;
+                return total;
             }
         }
-
     }
 }

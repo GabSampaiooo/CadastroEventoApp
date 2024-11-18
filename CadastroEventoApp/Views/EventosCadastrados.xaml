@@ -9,21 +9,42 @@
     <ScrollView>
         <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
-            <Label Text="Informações do Evento:" 
+            <Label Text="Resumo do Evento" 
                    FontFamily="NotoRegular"
-                   FontSize="30"
+                   FontSize="40"
                    HorizontalTextAlignment="Center"/>
 
             <Frame Margin="10">
                 <VerticalStackLayout>
-                    <Label Text="Nome do evento" 
+                    <Label Text="{Binding Nome}" 
                            HorizontalTextAlignment="Center"
-                           TextColor="Black"/>
+                           TextColor="Black"
+                           FontSize="40"/>
 
                     <Frame Margin="10">
-                    
-                            <Label Text="Datas*" 
-                               HorizontalTextAlignment="Center"/>
+                        <VerticalStackLayout>
+                            <Grid ColumnDefinitions="*, *"
+                                  RowDefinitions="Auto, Auto">
+                                
+                                <Label Text="Data de Início:" 
+                                       FontFamily="NotoRegular"
+                                       Grid.Row="0" Grid.Column="0"/>
+
+                                <Label Text="{Binding DataInicio, StringFormat='{}{0:dd/MM/yyyy}' }" 
+                                       FontFamily="NotoRegular"
+                                       Grid.Row="1" Grid.Column="0"/>
+
+                                <Label Text="Data de Término:" 
+                                       FontFamily="NotoRegular"
+                                       Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding DataTermino, StringFormat='{}{0:dd/MM/yyyy}' }" 
+                                       FontFamily="NotoRegular"
+                                       Grid.Row="1" Grid.Column="1"/>
+
+
+                            </Grid>
+                        </VerticalStackLayout>
+                            
 
                     </Frame>
 
@@ -37,7 +58,7 @@
                                         Grid.Row="0" Grid.Column="0"
                                         Margin="10"/>
 
-                                <Label  Text="50" 
+                                <Label  Text="{Binding NumeroParticipantes}" 
                                         FontFamily="NotoRegular"
                                         Grid.Row="1" Grid.Column="0"
                                         Margin="10"/>
@@ -47,7 +68,7 @@
                                        Grid.Row="0" Grid.Column="1"
                                        Margin="10"/>
 
-                                <Label  Text="50,00" 
+                                <Label  Text="{Binding CustoPorParticipante, StringFormat='{}{0:c}'}" 
                                         FontFamily="NotoRegular"
                                         Grid.Row="1" Grid.Column="1"
                                         Margin="10"/>
@@ -59,15 +80,15 @@
                         <VerticalStackLayout>
                             <Label Text="Local do Evento:"/>
                             <HorizontalStackLayout>
-                                <Label Text="Rua e tals*" />
+                                <Label Text="{Binding Local}" />
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
                     </Frame>
 
                     <Frame Margin="10">
                         <HorizontalStackLayout>
-                            <Label Text="Custo do ingresso:" />
-                            <Label Text=" 465,56***" />
+                            <Label Text="Valor Total:" />
+                            <Label Text="{Binding CustoTotal, StringFormat='{}{0:c}'}" />
                         </HorizontalStackLayout>
                     </Frame>
                 
