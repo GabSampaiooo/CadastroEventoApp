@@ -10,7 +10,7 @@
         <VerticalStackLayout VerticalOptions="CenterAndExpand"
                              Padding="10">
 
-            <Label Text="Cadastre Seu Evento"
+            <Label Text="Cadastre Seu Evento Aqui:"
                    FontFamily="NotoRegular"
                    FontSize="40"
                    HorizontalTextAlignment="Center"/>
@@ -76,7 +76,8 @@
                     <Button Text="Finalizar Cadastro" 
                             Clicked="Button_Clicked"
                             FontAttributes="Bold"
-                            FontSize="15"/>
+                            FontSize="15"
+                            HorizontalOptions="Center"/>
 
                 </VerticalStackLayout>
 

@@ -5,10 +5,79 @@
              Title="EventosCadastrados"
              NavigationPage.HasNavigationBar="False"
              Background="{StaticResource Gray200}">
-    
-    <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
-        <Label Text="{Binding NomeEntry.Nome}" />
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
-    </VerticalStackLayout>
+            <Label Text="Informações do Evento:" 
+                   FontFamily="NotoRegular"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"/>
+
+            <Frame Margin="10">
+                <VerticalStackLayout>
+                    <Label Text="Nome do evento" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="Black"/>
+
+                    <Frame Margin="10">
+                    
+                            <Label Text="Datas*" 
+                               HorizontalTextAlignment="Center"/>
+
+                    </Frame>
+
+                    <Frame Margin="10">
+
+                        <VerticalStackLayout>
+                            <Grid ColumnDefinitions="*, *"
+                                  RowDefinitions="Auto, Auto">
+                                <Label  Text="Total de participantes:" 
+                                        FontFamily="NotoRegular"
+                                        Grid.Row="0" Grid.Column="0"
+                                        Margin="10"/>
+
+                                <Label  Text="50" 
+                                        FontFamily="NotoRegular"
+                                        Grid.Row="1" Grid.Column="0"
+                                        Margin="10"/>
+
+                                <Label Text="Custo do Ingresso :" 
+                                       FontFamily="NotoRegular"
+                                       Grid.Row="0" Grid.Column="1"
+                                       Margin="10"/>
+
+                                <Label  Text="50,00" 
+                                        FontFamily="NotoRegular"
+                                        Grid.Row="1" Grid.Column="1"
+                                        Margin="10"/>
+                            </Grid>
+                        </VerticalStackLayout>                                            
+                    </Frame>
+
+                    <Frame Margin="10">
+                        <VerticalStackLayout>
+                            <Label Text="Local do Evento:"/>
+                            <HorizontalStackLayout>
+                                <Label Text="Rua e tals*" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Margin="10">
+                        <HorizontalStackLayout>
+                            <Label Text="Custo do ingresso:" />
+                            <Label Text=" 465,56***" />
+                        </HorizontalStackLayout>
+                    </Frame>
+                
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Voltar" 
+                    Clicked="Button_Clicked"
+                    HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

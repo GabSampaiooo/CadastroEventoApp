@@ -1,22 +1,36 @@
+using CadastroEventoApp.Models;
+
 namespace CadastroEventoApp.Views;
 
 public partial class CadastroEventos : ContentPage
 {
+    public Evento Evento { get; set; }
 	public CadastroEventos()
 	{
 		InitializeComponent();
+        Evento = new Evento();
+        BindingContext = this;
 	}
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        try
+        if (int.TryParse(NumeroParticipantesEntry.Text, out int numeroParticipantes) &&
+            decimal.TryParse(CustoPorParticipanteEntry.Text, out decimal custo))
         {
-            await Navigation.PushAsync(new EventosCadastrados());
+            Evento.NumeroParticipantes = numeroParticipantes;
+            Evento.CustoPorParticipante = custo;
 
+            await Navigation.PushAsync(new EventosCadastrados());
         }
-        catch (Exception ex)
-        {
-            DisplayAlert("Ops", ex.Message, "OK");
+        else
+        { 
+            await DisplayAlert("Ops!", "Por Favor, preencha os campos corretamente", "OK");
         }
+            
+        
     }
 }
+
+
+       
+            
