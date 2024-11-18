@@ -33,6 +33,7 @@
                             <HorizontalStackLayout>
                                 <Label Text="Data de Início:" />
                                 <DatePicker x:Name="DataInicioPicker"
+                                            DateSelected="DataInicioPicker_DateSelected"
                                             Date="{Binding Evento.DataInicio}"
                                             Format="dd/MM/yyyy"/>
                             </HorizontalStackLayout>

@@ -7,7 +7,7 @@
         public DateTime DataTermino { get; set; }
         public int NumeroParticipantes { get; set; }
         public string Local { get; set; }
-        public decimal CustoPorParticipante { get; set; }
+        public double CustoPorParticipante { get; set; }
 
         //Cálculo da duração do evento em dias
         public int DuracaoEvento
@@ -19,7 +19,7 @@
         }
 
         //Cálculo do custo total do evento
-        public decimal CustoTotal
+        public double CustoTotal
         {
             get
             {
